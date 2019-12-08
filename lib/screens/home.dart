@@ -1,6 +1,6 @@
 import 'package:wallz/src/appBar.dart';
 import 'package:wallz/src/row_heading.dart';
-import 'package:wallz/src/wallpaperr_row.dart';
+import 'package:wallz/src/row_of_wallpaper.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
