@@ -1,7 +1,7 @@
 // Ketan Choyal
 // GitHub Link to this Project:
 // ketanchoyal/custom_top_bar
-
+import 'package:wallz/shared/appbar_shape.dart';
 import 'package:flutter/material.dart';
 
 final Color color1 = Color(0xffB5192F);
@@ -12,7 +12,7 @@ final Color color4 = Color(0xffF0631C);
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   // final Widget child;
-  // final Function onPressed;
+  final Function onPressed;
   // final Function onTitleTapped;
 
   @override
@@ -20,7 +20,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   TopBar({
     @required this.title,
     // @required this.child,
-    // @required this.onPressed,
+    @required this.onPressed,
     // this.onTitleTapped
   }) : preferredSize = Size.fromHeight(100.0);
 
@@ -48,7 +48,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
                       minWidth: 50,
                       elevation: 10,
                       shape: kBackButtonShape,
-                      onPressed: () {},
+                      onPressed: onPressed,
                       // onPressed: onPressed,
                       child: kBackBtn,
                     ),
@@ -99,15 +99,3 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
-
-ShapeBorder kBackButtonShape = RoundedRectangleBorder(
-  borderRadius: BorderRadius.only(
-    topRight: Radius.circular(30),
-    bottomRight: Radius.circular(30),
-  ),
-);
-
-Widget kBackBtn = Icon(
-  Icons.arrow_right,
-  color: Colors.black54,
-);

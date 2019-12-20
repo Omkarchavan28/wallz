@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-
-final _random = new Random();
 
 class SingleCard extends StatelessWidget {
   static const List<String> wallpapers = [
@@ -34,8 +31,9 @@ class SingleCard extends StatelessWidget {
               // color: color,
               borderRadius: BorderRadius.circular(15.0),
               image: DecorationImage(
-                image:
-                    AssetImage(wallpapers[_random.nextInt(wallpapers.length)]),
+                image: AssetImage(wallpapers[index]),
+
+                // AssetImage(wallpapers[_random.nextInt(wallpapers.length)]),
                 fit: BoxFit.cover,
               ),
             ),
